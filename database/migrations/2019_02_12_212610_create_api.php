@@ -14,6 +14,12 @@ class CreateApi extends Migration
     public function up()
     {
 
+        Schema::dropIfExists('sketches');
+
+        Schema::dropIfExists('password_resets');
+
+        Schema::dropIfExists('users');
+
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
@@ -22,15 +28,14 @@ class CreateApi extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->useCurrent();
+            $table->timestamp('updated_at')->nullable();
         });
 
         Schema::create('password_resets', function (Blueprint $table) {
             $table->string('email')->index();
             $table->string('token');
             $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->useCurrent();
-            //$table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
         });
 
         Schema::create('sketches', function (Blueprint $table) {
@@ -46,7 +51,7 @@ class CreateApi extends Migration
                 ->references('id')->on('users')
                 ->onDelete('cascade');
             $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->useCurrent();
+            $table->timestamp('updated_at')->nullable();
         });
 
 

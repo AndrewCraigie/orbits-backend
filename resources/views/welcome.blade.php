@@ -28,7 +28,7 @@
             @endif
 
                 <div id="app"></div>
-                <script type="text/javascript" src="/main.dde06e74f53d38b2cd83.js"></script>
+                <script type="text/javascript" src="/main.75cab0af8f3462f4de33.js"></script>
         </div>
     </body>
 </html>

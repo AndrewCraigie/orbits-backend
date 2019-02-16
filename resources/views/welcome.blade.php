@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
         <title>Orbiter</title>
         <link rel="shortcut icon" href="/favicon.ico">
-        <link href="/main.26c8eed4e5bf0211a5a8.css" rel="stylesheet">
+        <link href="/styles.css" rel="stylesheet">
 
 
 
@@ -28,7 +28,7 @@
             @endif
 
                 <div id="app"></div>
-                <script type="text/javascript" src="/main.75cab0af8f3462f4de33.js"></script>
+                <script type="text/javascript" src="/bundle.js"></script>
         </div>
     </body>
 </html>
